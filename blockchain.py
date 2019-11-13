@@ -2,17 +2,15 @@ import hashlib
 
 
 class Block:
-    def __init__(self, previous_hash: float, transactions):
+    def __init__(self, previous_hash, transactions: str):
         self.previousHash = previous_hash
         self.transactions = transactions
 
-
     def get_blockhash(self):
-        trans_str = str(self.transactions)
-        blockhash = hashlib.sha256(trans_str.encode()).hexdigest()
-        return blockhash
-
-
+        blockhash = hashlib.sha256()
+        blockhash.update(str(self.previousHash).encode())
+        blockhash.update(self.transactions.encode())
+        return blockhash.hexdigest()
 
     def get_transactions(self):
         return self.transactions

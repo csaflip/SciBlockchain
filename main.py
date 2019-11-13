@@ -6,7 +6,11 @@ genesisBlock = Block(0, genesis_transaction)
 
 print(genesisBlock.get_blockhash())
 
-second = Block(genesisBlock.get_previous_block_hash(), 'This is the second transaction')
+second = Block(genesisBlock.get_blockhash(), 'This is the second transaction')
 
 print(second.get_blockhash())
+
+third = Block(second.get_blockhash(), 'This is my third message.')
+
+print(third.get_blockhash())
 
