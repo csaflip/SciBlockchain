@@ -13,5 +13,3 @@ print(second.get_blockhash())
 third = Block(second.get_blockhash(), 'This is my third message.', 1)
 
 print(third.get_blockhash())
-
-#you're gay
