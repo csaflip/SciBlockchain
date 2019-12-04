@@ -1,18 +1,14 @@
 from blockchain import Block, Transaction
 
 
+# SAMPLE BLOCKCHAIN EXAMPLE
 
-
-
-
-##SAMPLE BLOCKCHAIN EXAMPLE
-
-#Genesis block building
+# Genesis block building
 genesis_transaction = []
 genesis_transaction.append(Transaction('sample.pdf'))
 genesisBlock = Block(0, genesis_transaction, 1)
 
-##Adding blocks with different transcations
+# Adding blocks with different transcations
 second_transactions = []
 second_transactions.append(Transaction('test.pdf'))
 second_transactions.append(Transaction('docfile.docx'))
